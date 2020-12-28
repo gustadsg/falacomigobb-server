@@ -2,7 +2,7 @@ let users = [];
 
 function addUser({ id, name, room }) {
   if (!name || !room) {
-    return { error: "Username or room is missing" };
+    name = name + toString(Math.floor(Math.random() * 1000));
   }
   name = name.trim().toLowerCase();
   room = room.trim().toLowerCase();
